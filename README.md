@@ -30,3 +30,24 @@ Take each element one by one.
 Count how many times that element occurs in the array.
 If its count is greater than n/2, return that element.
 If no element satisfies the condition, return -1.
+
+**Code**
+class Solution {
+    int majorityElement(int arr[]) {
+        // code here
+        int mid=arr.length/2;
+        for(int i=0;i<arr.length;i++){
+            int count=0;
+            for(int j=0;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    count++;
+                }
+            }
+        if(count>mid){
+            return arr[i];
+        }
+        
+        }
+        return -1;
+    }
+}
